@@ -1,0 +1,32 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <nav>
+    <a href="/angular1" onclick="singleSpaNavigate(event)">Angular 1</a>
+    <a href="/angular2" onclick="singleSpaNavigate(event)">Angular 2</a>
+    <a href="side-by-side" onclick="singleSpaNavigate(event)">side-by-side</a>
+  </nav>
+  <main>
+    <route path="/angular1">
+      <application name="@app/angular1"></application>
+    </route>
+
+    <route path="/angular2">
+      <application name="@app/angular2"></application>
+    </route>
+
+    <route path="side-by-side">
+      <application name="@app/angular1"></application>
+      <application name="@app/angular2"></application>
+    </route>
+
+    <route default>
+      <p>Select an application</p>
+    </route>
+  </main>
+</single-spa-router>
