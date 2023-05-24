@@ -37,7 +37,9 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+          "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+          "rxjs": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs/system/es2015/rxjs.min.js",
+          "rxjs/operators": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs/system/es2015/rxjs-operators.min.js"
         }
       }
     </script>
@@ -56,7 +58,9 @@
         "imports": {
           "@app/root-config": "//localhost:9000/app-root-config.js",
           "@app/angular1": "//localhost:4200/main.js",
-          "@app/angular2": "//localhost:4201/main.js"
+          "@app/angular2": "//localhost:4201/main.js",
+          "@app/svelte1": "//localhost:5000/main.js",
+          "@app/util": "http://localhost:8500/app-util.js"
         }
       }
     </script>

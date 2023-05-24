@@ -5,12 +5,23 @@
     See https://single-spa.js.org/docs/layout-definition/ for more information.
 
   -->
+  <div class="flex">
+    <div class="navbar">
+      <nav>
+        <a href="/angular1" onclick="singleSpaNavigate(event)">Angular 1</a>
+        <br />
+        <a href="/angular2" onclick="singleSpaNavigate(event)">Angular 2</a>
+        <br />
+        <a href="/svelte1" onclick="singleSpaNavigate(event)">Svelte</a>
+        <br />
+        <a href="/all" onclick="singleSpaNavigate(event)">all</a>
+        <br />
+      </nav>
+      <hr />
+    </div>
+    <div class="content"></div>
+  </div>
 
-  <nav>
-    <a href="/angular1" onclick="singleSpaNavigate(event)">Angular 1</a>
-    <a href="/angular2" onclick="singleSpaNavigate(event)">Angular 2</a>
-    <a href="/side-by-side" onclick="singleSpaNavigate(event)">side-by-side</a>
-  </nav>
   <main>
     <route path="angular1">
       <application name="@app/angular1"></application>
@@ -20,9 +31,14 @@
       <application name="@app/angular2"></application>
     </route>
 
-    <route path="side-by-side">
+    <route path="svelte1">
+      <application name="@app/svelte1"></application>
+    </route>
+
+    <route path="all">
       <application name="@app/angular1"></application>
       <application name="@app/angular2"></application>
+      <application name="@app/svelte1"></application>
     </route>
 
     <route default>
