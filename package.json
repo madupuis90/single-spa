@@ -38,7 +38,6 @@
   "dependencies": {
     "@types/jest": "^27.0.1",
     "@types/systemjs": "^6.1.1",
-    "rxjs": "^7.8.1",
     "single-spa": "^5.9.3",
     "single-spa-layout": "^1.6.0"
   }
